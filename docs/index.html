@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servidor Zomboid - Hardcore Survival</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 3px solid #e94560;
+        }
+        .hero h1 {
+            font-size: 3em;
+            color: #e94560;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
+        }
+        .hero p {
+            font-size: 1.3em;
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .section {
+            margin-bottom: 50px;
+        }
+        .section h2 {
+            font-size: 1.8em;
+            color: #e94560;
+            margin-bottom: 20px;
+            border-left: 4px solid #e94560;
+            padding-left: 15px;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #1a1a2e;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 25px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #e94560;
+        }
+        .card h3 {
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .card p {
+            color: #aaa;
+            font-size: 0.95em;
+        }
+        .card .emoji {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .mod-list {
+            background: #1a1a2e;
+            border-radius: 10px;
+            padding: 25px;
+            border: 1px solid #333;
+        }
+        .mod-list h3 {
+            color: #e94560;
+            margin-bottom: 15px;
+        }
+        .mod-list ul {
+            list-style: none;
+            columns: 2;
+        }
+        .mod-list ul li {
+            padding: 5px 0;
+            border-bottom: 1px solid #222;
+            font-size: 0.9em;
+        }
+        .mod-list ul li::before {
+            content: "▸ ";
+            color: #e94560;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .info-item {
+            background: #1a1a2e;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+        .info-item .value {
+            font-size: 1.8em;
+            color: #e94560;
+            font-weight: bold;
+        }
+        .info-item .label {
+            color: #888;
+            font-size: 0.85em;
+            margin-top: 5px;
+        }
+        .warning {
+            background: #2d1b1b;
+            border: 1px solid #e94560;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .warning h3 {
+            color: #e94560;
+            margin-bottom: 10px;
+        }
+        .warning ul {
+            padding-left: 20px;
+        }
+        .warning ul li {
+            margin: 5px 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #555;
+            border-top: 1px solid #222;
+        }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2em; }
+            .mod-list ul { columns: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>🧟 HARDCORE SURVIVAL</h1>
+    <p>Servidor Project Zomboid com clima letal, doenças mortais e recursos escassos. Sobreviva se puder.</p>
+</div>
+
+<div class="container">
+
+    <div class="section">
+        <h2>📊 Status do Servidor</h2>
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="value">v41.78</div>
+                <div class="label">Versão</div>
+            </div>
+            <div class="info-item">
+                <div class="value">48</div>
+                <div class="label">Mods</div>
+            </div>
+            <div class="info-item">
+                <div class="value">32</div>
+                <div class="label">Max Players</div>
+            </div>
+            <div class="info-item">
+                <div class="value">8GB</div>
+                <div class="label">RAM</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎯 Características</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="emoji">❄️</div>
+                <h3>Clima Letal</h3>
+                <p>Baseado em dados reais de Kentucky. Inverno chega a -20°C. Hipotermia mata em minutos sem abrigo. Tempestades quebram janelas e atraem hordas.</p>
+            </div>
+            <div class="card">
+                <div class="emoji">🩸</div>
+                <h3>Doenças Mortais</h3>
+                <p>Gripe pode evoluir pra pneumonia. Feridas infectadas matam sem antibióticos. Mordida? Única cura é amputação.</p>
+            </div>
+            <div class="card">
+                <div class="emoji">🌾</div>
+                <h3>Recursos Escassos</h3>
+                <p>Farming com pragas e seca. Pesca por temporada. Gasolina precisa de mangueira. Água precisa de cisterna ou neve derretida.</p>
+            </div>
+            <div class="card">
+                <div class="emoji">🔫</div>
+                <h3>Balística Realista</h3>
+                <p>Sistema de tiro com bloom, recuo, penetração. Headshots importam. Fabricação de munição. Armas históricas e NATO.</p>
+            </div>
+            <div class="card">
+                <div class="emoji">🗺️</div>
+                <h3>Mapas Expandidos</h3>
+                <p>Fort Knox (base militar), Raven Creek (cidade densa), Prisão (spawn temático). Trailers como base móvel.</p>
+            </div>
+            <div class="card">
+                <div class="emoji">🧬</div>
+                <h3>Progressão Dinâmica</h3>
+                <p>Traits evoluem conforme você joga. Esquizofrenia, sistema de bravura, traits ganhas por kills e exploração.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🗺️ Mapas Disponíveis</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>🏘️ Vanilla</h3>
+                <p>Muldraugh • West Point • Rosewood • Riverside • Louisville</p>
+            </div>
+            <div class="card">
+                <h3>🏰 Fort Knox</h3>
+                <p>Base militar gigante. Quartéis, hangares, veículos blindados. Endgame com loot pesado e muitos zumbis.</p>
+            </div>
+            <div class="card">
+                <h3>🏙️ Raven Creek</h3>
+                <p>Cidade urbana densa com prédios altos, hospital, shopping. Alta concentração de zumbis. Ótimo pra loot.</p>
+            </div>
+            <div class="card">
+                <h3>🔒 Prisão</h3>
+                <p>Spawn como prisioneiro. Começa sem nada, preso, cercado. Sobreviva e escape.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📦 Mods Instalados</h2>
+        <div class="mod-list">
+            <h3>🌦️ Clima e Sobrevivência</h3>
+            <ul>
+                <li>KYR Real Weather Mod</li>
+                <li>Hypothermia Kills Hard</li>
+                <li>Surviving The Storm</li>
+                <li>Weather Moodles</li>
+                <li>Hard Farming</li>
+                <li>Hard Fishing</li>
+                <li>Hard Trapping</li>
+                <li>Snow is Water</li>
+                <li>Food Preservation Plus</li>
+                <li>RS Water Cistern</li>
+                <li>Working Masks</li>
+                <li>Siphoning Needs Hoses</li>
+            </ul>
+        </div>
+        <br>
+        <div class="mod-list">
+            <h3>🔫 Armas e Combate</h3>
+            <ul>
+                <li>Advanced Trajectory (Balística)</li>
+                <li>Simple Overhaul Melee Weapons</li>
+                <li>Dual Pistol Wield</li>
+                <li>Gun Stock Attack</li>
+                <li>Ammomaker</li>
+                <li>TEBFP (Armas)</li>
+                <li>TIHFP (Históricas)</li>
+                <li>TNFP (NATO)</li>
+                <li>Spear Traps</li>
+                <li>True Crawl</li>
+            </ul>
+        </div>
+        <br>
+        <div class="mod-list">
+            <h3>🚗 Veículos e Equipamento</h3>
+            <ul>
+                <li>Autotsar Trailers</li>
+                <li>FR Used Cars</li>
+                <li>KI5 Trailers</li>
+                <li>Riding Mower</li>
+                <li>Semi Truck</li>
+                <li>69 Charger</li>
+                <li>KATTAJ1 Military Gear</li>
+                <li>RV Interior (Base Móvel)</li>
+            </ul>
+        </div>
+        <br>
+        <div class="mod-list">
+            <h3>🧬 Traits e Outros</h3>
+            <ul>
+                <li>Evolving Traits World</li>
+                <li>Toad Traits + Dynamic</li>
+                <li>Schizophrenia Trait</li>
+                <li>Danger Moodles (Doenças)</li>
+                <li>The Only Cure (Amputação)</li>
+                <li>True Music + Jukebox</li>
+                <li>Military Drops (Helicóptero)</li>
+                <li>Worse Zombie Loot</li>
+                <li>Generator Time Remaining</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="warning">
+        <h3>⚠️ Avisos Importantes</h3>
+        <ul>
+            <li>Servidor <strong>hardcore</strong> — morte é comum, especialmente no inverno</li>
+            <li>Todos os mods precisam estar inscritos na Workshop antes de entrar</li>
+            <li>PVP ativado com Safety System — você escolhe quando ativar</li>
+            <li>Loot NÃO respawna — explore com sabedoria</li>
+            <li>Inverno é LETAL sem preparação adequada</li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>Servidor Project Zomboid - Hardcore Survival | 2024</p>
+</div>
+
+</body>
+</html>
