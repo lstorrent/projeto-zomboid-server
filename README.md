@@ -1,11 +1,39 @@
 # 🧟 Servidor Project Zomboid - Hardcore Survival
 
-> Servidor dedicado de Project Zomboid focado em **sobrevivência realista e hardcore**, com clima letal, doenças perigosas e exploração recompensadora.
+> ⚠️ **PROJETO EM FASE ALPHA** — Configurações em desenvolvimento, testes e aceitação da comunidade. O objetivo é criar um servidor o mais próximo possível do **perfeito hardcore survival**.
 
 ![Project Zomboid](https://img.shields.io/badge/Project%20Zomboid-v41.78.19-green)
 ![Mods](https://img.shields.io/badge/Mods-48-blue)
 ![Players](https://img.shields.io/badge/Max%20Players-32-orange)
-![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)
+![Status](https://img.shields.io/badge/Status-ALPHA-red)
+
+---
+
+## 🚧 Status do Projeto
+
+```
+╔══════════════════════════════════════════════════════════╗
+║  🔴 ALPHA - Em desenvolvimento e testes                 ║
+║                                                          ║
+║  • Mods sendo testados e balanceados                     ║
+║  • Configurações de sandbox em ajuste                    ║
+║  • Feedback da comunidade é bem-vindo!                   ║
+║  • Wipes podem acontecer a qualquer momento              ║
+╚══════════════════════════════════════════════════════════╝
+```
+
+### Roadmap
+- [x] Seleção de mods de clima hardcore
+- [x] Seleção de mods de armas e combate
+- [x] Seleção de mapas extras
+- [x] Validação de Workshop IDs
+- [ ] Balanceamento do SandboxVars (zumbis, loot, clima)
+- [ ] Testes de compatibilidade entre mods
+- [ ] Testes de performance com jogadores
+- [ ] Ajuste fino de spawn/população de zumbis
+- [ ] Configuração do RandomZombiesFull (sprinters à noite)
+- [ ] Feedback da comunidade e ajustes finais
+- [ ] Release BETA
 
 ---
 
@@ -19,6 +47,19 @@
 | **RAM** | 8GB (ZGC) |
 | **Instância** | servertest |
 | **Porta** | 16261 (TCP/UDP) |
+| **Status** | 🔴 ALPHA — em testes |
+
+---
+
+## 🎯 Filosofia do Servidor
+
+O objetivo é criar uma experiência onde:
+
+1. **O clima é seu inimigo** — Inverno mata, tempestades destroem, hipotermia é real
+2. **Cada ferida importa** — Infecções matam, mordida = amputação ou morte
+3. **Recursos são preciosos** — Loot não respawna, gasolina é escassa, comida estraga
+4. **Preparação é tudo** — Sem planejamento = morte certa
+5. **Exploração recompensa** — Mapas extras com loot militar e desafios únicos
 
 ---
 
@@ -30,7 +71,7 @@ O servidor inclui os mapas vanilla + 5 mapas de mods:
 |------|------|-----------|
 | Muldraugh, KY | Vanilla | Cidade inicial clássica |
 | West Point, KY | Vanilla | Cidade média com ponte |
-| Rosewood, KY | Vanilla | Cidade pequena com prisão |
+| Rosewood, KY | Vanilla | Cidade pequena |
 | Riverside, KY | Vanilla | Cidade residencial ao norte |
 | Louisville, KY | Vanilla | Metrópole gigante |
 | **Fort Knox** | Mod | Base militar — endgame, loot pesado |
@@ -134,6 +175,8 @@ O servidor inclui os mapas vanilla + 5 mapas de mods:
 
 ## ⚙️ Configuração Principal
 
+> ⚠️ Valores em fase de teste — sujeitos a mudança
+
 ### Gameplay
 - **PVP:** Ativado com Safety System
 - **Dificuldade:** Hardcore (clima letal, doenças, recursos escassos)
@@ -152,7 +195,7 @@ O servidor inclui os mapas vanilla + 5 mapas de mods:
 
 | Script | Uso |
 |--------|-----|
-| `scripts/buscar_workshop.sh` | Buscar Workshop IDs de mods |
+| `scripts/buscar_workshop.sh` | Buscar Workshop IDs de mods na Steam |
 | `scripts/validar_ids.sh` | Validar se IDs existem na Steam |
 
 ---
@@ -163,28 +206,31 @@ O servidor inclui os mapas vanilla + 5 mapas de mods:
 Servidor-Zomboid/
 ├── Zomboid/
 │   ├── Server/
-│   │   ├── servertest.ini          # Config principal
+│   │   ├── servertest.ini              # Config principal
 │   │   ├── servertest_SandboxVars.lua  # Sandbox (zumbis, loot, clima)
 │   │   ├── servertest_spawnregions.lua # Regiões de spawn
 │   │   └── servertest_spawnpoints.lua  # Pontos de spawn
-│   ├── Saves/Multiplayer/          # Saves do mundo
-│   └── db/servertest.db            # Whitelist/contas
+│   ├── Saves/Multiplayer/              # Saves do mundo
+│   └── db/servertest.db               # Whitelist/contas
 └── pzserver/
-    ├── start-server.sh             # Script de inicialização
-    └── ProjectZomboid64.json       # Config JVM (RAM, GC)
+    ├── start-server.sh                 # Script de inicialização
+    └── ProjectZomboid64.json           # Config JVM (RAM, GC)
 ```
 
 ---
 
-## 🚀 Como Iniciar
+## 🤝 Contribuindo
 
-```bash
-cd ~/Servidor-Zomboid/pzserver
-./start-server.sh
-```
+Este projeto aceita sugestões da comunidade! Se você tem ideias para:
+- Novos mods que combinem com a proposta hardcore
+- Ajustes de balanceamento
+- Configurações de sandbox
+- Bugs ou incompatibilidades entre mods
+
+Abra uma **Issue** ou mande mensagem!
 
 ---
 
 ## 📝 Licença
 
-Este projeto é apenas para documentação pessoal de configuração de servidor.
+Projeto open-source para documentação e compartilhamento de configurações de servidor Project Zomboid.
