@@ -6,7 +6,7 @@
 
 ![Project Zomboid](https://img.shields.io/badge/Project%20Zomboid-v41.78.19-green)
 ![Mods](https://img.shields.io/badge/Mods-97-blue)
-![Players](https://img.shields.io/badge/Max%20Players-32-orange)
+![Players](https://img.shields.io/badge/Max%20Players-16-orange)
 ![Status](https://img.shields.io/badge/Status-ALPHA-red)
 
 ---
@@ -50,6 +50,10 @@
 | **RAM** | 8GB (ZGC) |
 | **Instância** | servertest |
 | **Porta** | 16261 (TCP/UDP) |
+| **Max Players** | 16 |
+| **Mods** | 97 Mod IDs / 111 Workshop Items |
+| **PVP** | Ativado (Safety System) |
+| **Loot Respawn** | Desativado |
 | **Status** | 🔴 ALPHA — em testes |
 
 ---
@@ -79,10 +83,10 @@ O servidor inclui os mapas vanilla + mapas de mods:
 | Rosewood, KY | Vanilla | Cidade pequena |
 | Riverside, KY | Vanilla | Cidade residencial ao norte |
 | Louisville, KY | Vanilla | Metrópole gigante |
-| **Louisville Spawnpoints** | Mod | Pontos de spawn em Louisville |
-| **Authentic Z Spawn** | Mod | Spawns temáticos com roupas realistas |
-| **Save Our Station - Knox Country** | Mod | 5 novas estações meteorológicas em Knox Country |
-| **RV Interior** | Mod | Interiores jogáveis de trailers/RVs/ônibus |
+| **Louisville Spawnpoints** | Mod | ~26 pontos de spawn em Louisville para começar direto na metrópole |
+| **Authentic Z Spawn** | Mod | Spawns temáticos com roupas realistas baseadas na localização |
+| **Save Our Station - Knox Country** | Mod | 5 novas estações meteorológicas reparavéis |
+| **RV Interior** | Mod | Interiores jogáveis de trailers, RVs e ônibus |
 
 ---
 
@@ -259,16 +263,28 @@ O servidor inclui os mapas vanilla + mapas de mods:
 > ⚠️ Valores em fase de teste — sujeitos a mudança
 
 ### Gameplay
-- **PVP:** Ativado com Safety System
-- **Dificuldade:** Hardcore (clima letal, doenças, recursos escassos)
-- **Loot Respawn:** Desativado
-- **Safehouses:** Jogadores podem claimar
+- **PVP:** Ativado com Safety System (jogador escolhe quando ativar)
+- **Max Players:** 16
+- **Dificuldade:** Hardcore (recursos escassos, sem respawn de loot)
+- **Loot Respawn:** Desativado (0 horas)
+- **Safehouses:** Desativado (em fase de teste)
+- **Veículos Vanilla:** Removidos (apenas veículos de mods)
+- **Hotwiring:** Livre para todos os jogadores
+- **VOIP:** Ativado (direcional 3D)
 
 ### Zumbis
 - **População:** High (multiplicador 2.0)
 - **Velocidade:** Fast Shamblers (dia) / Configurável por mods
 - **Respawn:** 72h após célula limpa
 - **Pico:** Dia 28 (multiplicador 1.5x)
+
+### Mods Principais Ativos
+- **Armas:** Brita's Weapon Pack + Arsenal GunFighter + Vanilla Firearms Expansion
+- **Veículos:** 20+ veículos realistas (Filibuster, KI5, Tsar) — sem vanilla
+- **Imersão:** Barricaded World, They Knew, Trash and Corpses, Rain Wash
+- **QoL:** Proximity Inventory, Reorder Hotbar, Cat's Reading, BetterFPS
+- **Construção:** More Builds + Building Menu + Immersive Solar Arrays
+- **Música:** True Music + 768 músicas brasileiras
 
 ---
 
