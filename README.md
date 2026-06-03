@@ -2,6 +2,8 @@
 
 > ⚠️ **PROJETO EM FASE ALPHA** — Configurações em desenvolvimento, testes e aceitação da comunidade. O objetivo é criar um servidor o mais próximo possível do **perfeito hardcore survival**.
 
+🌐 **Site do Projeto:** [https://lstorrent.github.io/projeto-zomboid-server/](https://lstorrent.github.io/projeto-zomboid-server/)
+
 ![Project Zomboid](https://img.shields.io/badge/Project%20Zomboid-v41.78.19-green)
 ![Mods](https://img.shields.io/badge/Mods-97-blue)
 ![Players](https://img.shields.io/badge/Max%20Players-32-orange)
