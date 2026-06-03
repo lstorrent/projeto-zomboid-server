@@ -94,8 +94,56 @@
             font-size: 0.9em;
         }
         .mod-list ul li::before {
+            content: "";
+            color: #e94560;
+        }
+        .mod-dropdown-list {
+            columns: 1;
+        }
+        .mod-dropdown-list li {
+            padding: 0 !important;
+            border-bottom: 1px solid #222;
+        }
+        .mod-dropdown-list li::before {
+            content: "" !important;
+        }
+        .mod-dropdown-list details {
+            padding: 8px 0;
+        }
+        .mod-dropdown-list summary {
+            cursor: pointer;
+            color: #fff;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.2s;
+            list-style: none;
+        }
+        .mod-dropdown-list summary::before {
             content: "▸ ";
             color: #e94560;
+        }
+        .mod-dropdown-list details[open] summary::before {
+            content: "▾ ";
+        }
+        .mod-dropdown-list summary:hover {
+            background: rgba(233, 69, 96, 0.1);
+        }
+        .mod-dropdown-list details p {
+            color: #aaa;
+            font-size: 0.9em;
+            padding: 8px 10px 5px 20px;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .mod-dropdown-list details a {
+            color: #e94560;
+            font-size: 0.8em;
+            text-decoration: none;
+            padding-left: 20px;
+        }
+        .mod-dropdown-list details a:hover {
+            text-decoration: underline;
         }
         .info-grid {
             display: grid;
@@ -179,7 +227,7 @@
                 <div class="label">Versão</div>
             </div>
             <div class="info-item">
-                <div class="value">48</div>
+                <div class="value">97</div>
                 <div class="label">Mods</div>
             </div>
             <div class="info-item">
@@ -252,67 +300,140 @@
     </div>
 
     <div class="section">
-        <h2>📦 Mods Instalados</h2>
-        <div class="mod-list">
-            <h3>🌦️ Clima e Sobrevivência</h3>
-            <ul>
-                <li>KYR Real Weather Mod</li>
-                <li>Hypothermia Kills Hard</li>
-                <li>Surviving The Storm</li>
-                <li>Weather Moodles</li>
-                <li>Hard Farming</li>
-                <li>Hard Fishing</li>
-                <li>Hard Trapping</li>
-                <li>Snow is Water</li>
-                <li>Food Preservation Plus</li>
-                <li>RS Water Cistern</li>
-                <li>Working Masks</li>
-                <li>Siphoning Needs Hoses</li>
-            </ul>
-        </div>
-        <br>
+        <h2>📦 Mods Instalados (97 Mod IDs / 111 Workshop Items)</h2>
+
         <div class="mod-list">
             <h3>🔫 Armas e Combate</h3>
-            <ul>
-                <li>Advanced Trajectory (Balística)</li>
-                <li>Simple Overhaul Melee Weapons</li>
-                <li>Dual Pistol Wield</li>
-                <li>Gun Stock Attack</li>
-                <li>Ammomaker</li>
-                <li>TEBFP (Armas)</li>
-                <li>TIHFP (Históricas)</li>
-                <li>TNFP (NATO)</li>
-                <li>Spear Traps</li>
-                <li>True Crawl</li>
+            <ul class="mod-dropdown-list">
+                <li><details><summary>Brita's Weapon Pack</summary><p>Pack massivo de armas de fogo — centenas de armas novas com modelos, sons e animações únicos. Inclui pistolas, rifles, shotguns, submetralhadoras, armas pesadas e muito mais.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2200148440" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Brita's Armor Pack</summary><p>Pack de armaduras e proteções balísticas — coletes, capacetes, viseiras, placas de proteção nível I a IV compatíveis com as armas do Brita.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2460154811" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Brita's Armor - Recolors Black</summary><p>Retexturas pretas de todas as armaduras do Brita — visual tático e discreto para operações noturnas.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3028787822" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Brita Armor Insulation Fix</summary><p>Corrige os valores de isolamento térmico excessivos das armaduras do Brita, evitando superaquecimento.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2931233550" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Arsenal(26) GunFighter</summary><p>Pack de armas militares e táticas com sistema de customização avançado — miras, silenciadores, grips, lanternas.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2297098490" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Vanilla Firearms Expansion</summary><p>Adiciona mais armas de fogo que se encaixam no lore vanilla — visualmente coerentes e balanceadas com o jogo base.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2667899942" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Gun Stock Attack</summary><p>Permite atacar zumbis com a coronha da arma de fogo quando sem munição — não fique indefeso.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3022568814" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Silencer</summary><p>Adiciona silenciadores como peça de arma — reduz drasticamente o som do disparo e a atração de zumbis.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=639909479" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Rifle Sling</summary><p>Sling craftável/saqueável — permite carregar um rifle ou shotgun extra no peito, liberando o slot das costas.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2644986930" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Noir's Rifle Slings</summary><p>Sistema avançado de slings — carregue armas de 2 mãos extras no peito e nas costas simultaneamente.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2786499395" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Noir Sling Tweak (Wear 4 Slings)</summary><p>Permite usar todas as 4 posições de sling simultaneamente para máximo carregamento de armas.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3027064433" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Extra Gun Slot</summary><p>Carregue pistolas na cintura (nas costas) como nos filmes — slot extra para handguns.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3120702374" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Open Ammo Boxes While Walking</summary><p>Permite abrir caixas de munição enquanto caminha — não precisa mais parar para recarregar.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2934985376" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Inspect Weapon</summary><p>HUD melhorado para inspecionar sua arma equipada — veja condição, munição e mods sem abrir menus.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2948824747" target="_blank">🔗 Workshop</a></details></li>
             </ul>
         </div>
         <br>
+
         <div class="mod-list">
-            <h3>🚗 Veículos e Equipamento</h3>
-            <ul>
-                <li>Autotsar Trailers</li>
-                <li>FR Used Cars</li>
-                <li>KI5 Trailers</li>
-                <li>Riding Mower</li>
-                <li>Semi Truck</li>
-                <li>69 Charger</li>
-                <li>KATTAJ1 Military Gear</li>
-                <li>RV Interior (Base Móvel)</li>
+            <h3>🚗 Veículos</h3>
+            <ul class="mod-dropdown-list">
+                <li><details><summary>Filibuster Rhymes' Used Cars!</summary><p>Pack massivo de veículos usados e realistas — dezenas de carros, vans, caminhões e veículos especiais com visual desgastado e autêntico.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1510950729" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>No Vanilla Vehicles</summary><p>Remove spawns de veículos vanilla genéricos — apenas veículos de mods (mais variados e realistas) aparecem.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2535461640" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Autotsar Trailers v1.40</summary><p>Trailers reboques variados — transporte de carga pesada, tanques de água, geradores móveis.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2282429356" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Aquatsar Yacht Club</summary><p>Barcos e iates jogáveis — exploração aquática, pesca em alto mar, fuga por rios.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2392987599" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Autotsar Motorclub</summary><p>Motocicletas — veículos rápidos e ágeis para exploração e fuga rápida.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2778576730" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Autotsar Bus</summary><p>Ônibus customizáveis — transporte de grupo, base móvel, grande capacidade de carga.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2592358528" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>'67 M706 Cadillac Gage Commando</summary><p>APC blindado M706 — veículo militar pesado, resistente a tiros, capacidade de transporte de tropas.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2478247379" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>'92 AM General M998 (Humvee)</summary><p>HMMWV militar 1992 com reboque de carga M101A3 — veículo off-road blindado leve.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2642541073" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>'86 Oshkosh P19A + Military Trailers</summary><p>Caminhão de bombeiros militar Oshkosh P19A + 4 trailers militares — veículo pesado de resgate/transporte.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2566953935" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>'80 Kawasaki KZ1000 Police</summary><p>Moto policial Kawasaki KZ1000 de 1980 (da série CHiPs) — rápida e ágil para patrulha.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2818847163" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>'28 Brough Superior SS100</summary><p>Moto clássica de 1928 — rara, estilo vintage, peça de colecionador.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2913634132" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>'82 Jeep J10</summary><p>Pickup Jeep J10 de 1982 — veículo off-road robusto, boa capacidade de carga.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2886832257" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>'88 Chevrolet S10</summary><p>Pickup Chevrolet S10 de 1988 — veículo utilitário compacto e versátil.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2886832936" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>'67 Shelby GT500 + Eleanor</summary><p>Muscle car Shelby GT500 de 1967 — veículo raro, alta velocidade, estilo clássico americano.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3026723485" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>'82 Porsche 911</summary><p>Porsche 911 de 1982 — esportivo raro, alta performance, difícil de encontrar.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3379334330" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>'90 BMW 3 Series (E30)</summary><p>BMW E30 de 1990 — sedan esportivo europeu compacto e confiável.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3110913021" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>'87 Ford B700/F700 Trucks</summary><p>Caminhões Ford B700 (ônibus) e F700 de 1987 — veículos pesados de transporte e carga.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3110911330" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>'91 Ford Ranger</summary><p>Pickup Ford Ranger de 1991 — veículo utilitário leve e econômico.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3539691958" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>'84 Cadillac Gage LAV-300</summary><p>Veículo blindado leve LAV-300 de 1984 — APC militar pesado, máxima proteção.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3171184800" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>1990 Toyota Land Cruiser 80-Series</summary><p>Toyota Land Cruiser J80 de 1990 — SUV off-road durável, excelente para exploração.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3171256616" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>RV Interior</summary><p>Adiciona interiores jogáveis a veículos grandes — RVs, motorhomes e ônibus viram bases móveis completas.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2822286426" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Braven's Bicycles Redux</summary><p>Bicicletas funcionais — veículo silencioso, sem combustível, ideal para exploração discreta.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2988491347" target="_blank">🔗 Workshop</a></details></li>
             </ul>
         </div>
         <br>
+
         <div class="mod-list">
-            <h3>🧬 Traits e Outros</h3>
-            <ul>
-                <li>Evolving Traits World</li>
-                <li>Toad Traits + Dynamic</li>
-                <li>Schizophrenia Trait</li>
-                <li>Danger Moodles (Doenças)</li>
-                <li>The Only Cure (Amputação)</li>
-                <li>True Music + Jukebox</li>
-                <li>Military Drops (Helicóptero)</li>
-                <li>Worse Zombie Loot</li>
-                <li>Generator Time Remaining</li>
+            <h3>🧬 Traits, Saúde e Progressão</h3>
+            <ul class="mod-dropdown-list">
+                <li><details><summary>Dynamic Traits Sauce Edition</summary><p>Perca traits negativos e ganhe positivos durante gameplay — seu personagem evolui com base nas ações realizadas.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2701370059" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Become Desensitized</summary><p>Seu personagem se dessensibiliza ao horror com o tempo — panic e stress diminuem conforme enfrenta zumbis. Configurável via sandbox.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2627877543" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Lifestyle: Hobbies</summary><p>Atividades de hobby — seu personagem pode desenvolver hobbies que afetam humor e habilidades ao longo do tempo.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2997342681" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>The Only Cure (Amputação)</summary><p>Mordido? Amputação é a única cura! Corte o membro infectado antes que o vírus se espalhe — sobreviva com deficiência permanente.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2703664356" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Working Masks</summary><p>Máscaras (como gas masks) realmente protegem contra doenças de cadáveres — reduz sickness ao usar proteção facial.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2760742937" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Mini Health Panel</summary><p>Painel minimalista de ferimentos — veja seus ferimentos sem abrir o menu de saúde. Desaparece quando não há feridas.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2866258937" target="_blank">🔗 Workshop</a></details></li>
+            </ul>
+        </div>
+        <br>
+
+        <div class="mod-list">
+            <h3>👕 Roupas e Equipamento</h3>
+            <ul class="mod-dropdown-list">
+                <li><details><summary>KATTAJ1 Clothes Core</summary><p>Core de roupas militares táticas — uniformes, calças cargo, botas, luvas e gear moderno.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3470422050" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Authentic Z</summary><p>Distribuição realista de roupas em zumbis — mais de 140 zumbis customizados com roupas autênticas baseadas em profissões.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2335368829" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Military Ponchos</summary><p>Substitui o poncho vanilla por modelo militar realista — proteção contra chuva com visual tático.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2629286881" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>ALICE Pack Mod</summary><p>Mochilas ALICE militares (Large e Medium) + frame — sistema de mochila militar autêntico com crafting.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=533833878" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>ALICE Gear</summary><p>Equipamento ALICE completo — suspensórios, cintos e pouches militares funcionais.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3610005735" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Night Vision Goggles</summary><p>Óculos de visão noturna funcionais — equipamento militar raro que permite enxergar no escuro.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2769995104" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Roman's Ushankas</summary><p>Chapéus ushanka (chapéu de pele russo) — proteção térmica contra frio extremo.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3614975251" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>British DPM Uniform</summary><p>Uniforme militar britânico DPM — camuflagem woodland autêntica das forças armadas UK.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3654107996" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Fluffy Hair</summary><p>Novos penteados — remove restrição de rabo de cavalo, mais opções estéticas para personagens.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2447729538" target="_blank">🔗 Workshop</a></details></li>
+            </ul>
+        </div>
+        <br>
+
+        <div class="mod-list">
+            <h3>🏗️ Construção e Base</h3>
+            <ul class="mod-dropdown-list">
+                <li><details><summary>More Builds (B41)</summary><p>Expande massivamente o menu de construção — dezenas de novas construções, móveis e estruturas craftáveis.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=515555911" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Improved Build Menu</summary><p>Menu de construção reorganizado e melhorado — tooltips informativos, capacidades de containers, receitas corrigidas.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1969456967" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Building Menu [B41.78]</summary><p>Menu de construção avançado — interface modernizada para todas as opções de construção.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3067798182" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Remove Debris</summary><p>Permite remover destroços e objetos feios da sua base — limpeza estética do ambiente.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2927744729" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Immersive Solar Arrays</summary><p>Painéis solares craftáveis — gere energia limpa para sua base sem depender de geradores e gasolina.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2969478819" target="_blank">🔗 Workshop</a></details></li>
+            </ul>
+        </div>
+        <br>
+
+        <div class="mod-list">
+            <h3>🌍 Mundo e Ambiente</h3>
+            <ul class="mod-dropdown-list">
+                <li><details><summary>Barricaded World</summary><p>Mundo mais realista — janelas já quebradas e aleatoriamente barricadas, como se outros sobreviventes já tivessem passado.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2696986935" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>They Knew</summary><p>Eles sabiam o tempo todo — o mundo mostra sinais de que o governo sabia da infecção antes do colapso.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2725378876" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Trash and Corpses</summary><p>Lixo e cadáveres antigos espalhados pelo mundo — ambiente pós-apocalíptico mais imersivo e desolador.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3231344297" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Rain Wash</summary><p>Chuva lava sangue e sujeira do seu personagem e do mundo — limpeza natural pelo clima.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2657661246" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Save Our Station - Knox Country</summary><p>5 novas estações meteorológicas em Knox Country para reparar e reativar.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2398274461" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Louisville Spawnpoints</summary><p>Pontos de spawn em Louisville — comece direto na metrópole para desafio máximo.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2678653895" target="_blank">🔗 Workshop</a></details></li>
+            </ul>
+        </div>
+        <br>
+
+        <div class="mod-list">
+            <h3>🎵 Entretenimento e Imersão</h3>
+            <ul class="mod-dropdown-list">
+                <li><details><summary>True Music v2.15</summary><p>Toque instrumentos musicais de verdade — guitarras, violões, baterias. Sistema completo de música in-game.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2613146550" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>BR Songs Vol.2 (True Music Addon)</summary><p>Pacote de músicas brasileiras para o True Music — MPB, rock nacional, modão e mais.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3291589876" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>True Music Addon: Brasileiras</summary><p>768 músicas brasileiras diversas — Legião Urbana, Raça Negra, Calypso e muito mais.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2973474633" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>TrueActions v1.09</summary><p>Ações imersivas — sentar em cadeiras, encostar em paredes, deitar no chão, animações realistas de interação.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2487022075" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>New Flashlight Animation</summary><p>Nova animação de lanterna — segurar a lanterna de forma mais realista e imersiva.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2960474000" target="_blank">🔗 Workshop</a></details></li>
+            </ul>
+        </div>
+        <br>
+
+        <div class="mod-list">
+            <h3>🛠️ QoL (Quality of Life)</h3>
+            <ul class="mod-dropdown-list">
+                <li><details><summary>Proximity Inventory</summary><p>Inventário de proximidade — veja e acesse itens de containers próximos sem precisar abrir cada um.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847184718" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Out the Window</summary><p>Jogue cadáveres pela janela! Solução imersiva para limpar corpos dos andares superiores da sua base.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2659216714" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Common Sense</summary><p>Melhorias variadas de qualidade de vida — pequenos ajustes de bom senso que o jogo base deveria ter.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2875848298" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Free Hotwiring</summary><p>Qualquer personagem pode fazer hotwire em veículos — sem restrição de habilidade elétrica.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3106149504" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Breaking In</summary><p>Arrombar portas, janelas e veículos com pé de cabra — mais opções de entrada forçada.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2978007916" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Reorder The Hotbar</summary><p>Reorganize a hotbar arrastando itens — clique e arraste para rearranjar posições.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2903771337" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Cat's Reading Mod</summary><p>Leitura mais rápida — sentar acelera ainda mais. Ler andando é permitido.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2690908199" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>I Don't Need A Lighter</summary><p>Acenda cigarros em fogões, fogueiras e qualquer fonte de fogo — sem depender de isqueiro.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2714198296" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Easily Find The Key</summary><p>Encontre chaves de veículos com mais facilidade — menos frustração ao procurar chaves.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2892005713" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Minimal Display Bars</summary><p>Barras minimalistas de status (fome, sede, saúde) no canto da tela — HUD discreto e informativo.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2004998206" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>PlayersOnMap</summary><p>Mostra jogadores no mapa e minimapa — localização de aliados em tempo real.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2879960936" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>Weapon Condition Indicator</summary><p>Mostra condição/durabilidade da arma na hotbar — veja desgaste sem abrir inventário.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2619072426" target="_blank">🔗 Workshop</a></details></li>
+                <li><details><summary>BetterFPS</summary><p>Ajuste de configurações de renderização para melhorar FPS geral — otimização de performance.</p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3022543997" target="_blank">🔗 Workshop</a></details></li>
             </ul>
         </div>
     </div>
