@@ -11,6 +11,35 @@
 
 ---
 
+## 🎯 Sobre o Servidor
+
+Este servidor foi projetado para um **grupo de amigos** que querem jogar juntos em um cenário hardcore survival. A proposta é um **PVE cooperativo com PVP sempre ativo**, sem botão para desligar — isso adiciona realismo e tensão ao jogo, já que qualquer jogador pode ser uma ameaça real, mesmo entre aliados.
+
+**Filosofia do servidor:**
+- 🤝 Feito para amigos jogarem juntos, não é um servidor público competitivo
+- ⚔️ PVP ativo 24/7 sem Safety System — realismo acima de tudo
+- 🧊 Mundo congela quando não há jogadores online (`PauseEmpty=true`) — nenhum progresso de tempo, zumbis ou deterioração acontece sem ninguém conectado
+- 🚫 Sem facções — o grupo já é a facção
+- 🎒 Loot não respawna — o que existe no mundo é tudo o que há
+- 🧟 Zumbis migram e respawnam — o mundo nunca fica seguro
+
+---
+
+## ⚠️ Aviso de Segurança
+
+> **Este repositório contém arquivos de configuração BASE.** Se você pretende fazer download e utilizar estas configs em outro servidor, **altere obrigatoriamente:**
+>
+> | O que alterar | Arquivo | Motivo |
+> |---------------|---------|--------|
+> | `Password` | servertest.ini | Senha padrão exposta |
+> | `RCONPassword` | servertest.ini | Acesso remoto ao console |
+> | `PublicName` | servertest.ini | Identificação do servidor |
+> | `ResetID` / `ServerPlayerID` | servertest.ini | IDs únicos por servidor |
+>
+> **Nunca utilize senhas padrão em um servidor público ou acessível pela internet.**
+
+---
+
 ## 🚧 Status do Projeto
 
 ```
@@ -30,6 +59,7 @@
 - [x] Seleção de mapas extras
 - [x] Validação de Workshop IDs
 - [x] Configuração completa de 111 Workshop Items
+- [x] Configuração do servertest_SandboxVars.lua
 - [ ] Balanceamento do SandboxVars (zumbis, loot, clima)
 - [ ] Testes de compatibilidade entre mods
 - [ ] Testes de performance com jogadores
@@ -52,12 +82,56 @@
 | **Porta** | 16261 (TCP/UDP) |
 | **Max Players** | 16 |
 | **Mods** | 97 Mod IDs / 111 Workshop Items |
-| **PVP** | Ativado (Safety System) |
+| **PVP** | Sempre ativo (sem Safety System) |
 | **Loot Respawn** | Desativado |
 | **Veículos Vanilla** | Removidos (só mods) |
 | **Hotwiring** | Livre para todos |
 | **VOIP** | Ativado (3D direcional) |
+| **Mundo sem players** | Congelado (PauseEmpty) |
+| **Facções** | Desativadas |
 | **Status** | 🔴 ALPHA — em testes |
+
+---
+
+## ⚙️ Configurações Alteradas
+
+Os arquivos `servertest.ini` e `servertest_SandboxVars.lua` foram ajustados manualmente para atender um grupo de amigos em uma experiência hardcore survival. Abaixo as principais decisões:
+
+### servertest.ini (principais)
+
+| Configuração | Valor | Motivo |
+|--------------|-------|--------|
+| `PVP` | true | Realismo — qualquer um pode atacar |
+| `SafetySystem` | false | Sem botão de PVP on/off |
+| `PauseEmpty` | true | Mundo congela sem jogadores online |
+| `MaxPlayers` | 16 | Performance com 97 mods |
+| `Faction` | false | Grupo de amigos, sem necessidade |
+| `PlayerSafehouse` | false | Sem safehouses protegidas |
+| `SleepAllowed` | false | Servidor não pausa por sono |
+| `HoursForLootRespawn` | 0 | Sem respawn de loot |
+| `VoiceEnable` | true | VOIP 3D direcional |
+| `DoLuaChecksum` | true | Anti-cheat de arquivos |
+| `BackupsCount` | 3 | Mantém últimos 3 backups |
+
+### servertest_SandboxVars.lua (principais)
+
+| Configuração | Valor | Motivo |
+|--------------|-------|--------|
+| `DayLength` | 4 (2h reais) | Ciclo dia/noite mais longo |
+| `WaterShutModifier` | 45 dias | Água corta no dia 45 |
+| `ElecShutModifier` | 40 dias | Luz corta no dia 40 |
+| `LootRespawn` | None | Loot não reaparece |
+| `Zombies` | High | Alta quantidade de zumbis |
+| `ZombieLore.Speed` | Fast Shamblers | Rápidos mas não correm |
+| `ZombieLore.Transmission` | Blood + Saliva | Infecção por sangue e mordida |
+| `ZombieLore.Mortality` | 2-3 Days | Morte lenta após infecção |
+| `PopulationPeakDay` | 28 | Pico de zumbis no dia 28 |
+| `RespawnHours` | 72h | Zumbis respawnam a cada 72h |
+| `RedistributeHours` | 12h | Zumbis migram a cada 12h |
+| `HoursForCorpseRemoval` | 72h (3 dias) | Corpos somem em 3 dias |
+| `DamageToPlayerFromHitByACar` | Normal | Atropelamento causa dano |
+| `MultiHitZombies` | false | Sem hit múltiplo (mais difícil) |
+| `AllowMiniMap` | false | Sem minimapa |
 
 ---
 
@@ -120,30 +194,6 @@ ProximityInventory 4213 ──► (standalone, NÃO usar com original)
 
 ---
 
-## ⚙️ Configuração do Servidor
-
-### servertest.ini (principais)
-
-| Configuração | Valor | Motivo |
-|--------------|-------|--------|
-| `MaxPlayers` | 16 | Performance com 97 mods |
-| `PVP` | true | Hardcore — Safety System ativo |
-| `HoursForLootRespawn` | 0 | Sem respawn de loot |
-| `PlayerSafehouse` | false | Em teste |
-| `SleepAllowed` | false | Servidor não pausa |
-| `VoiceEnable` | true | VOIP 3D |
-| `Voice3D` | true | Áudio direcional |
-| `DoLuaChecksum` | true | Anti-cheat de arquivos |
-| `NoVanillaVehicles` | (mod) | Só veículos de mods |
-
-### Mapas configurados
-
-```
-Map=vehicle_interior;AZSpawn;SaveOurStation_KnoxCountry_World;Louisville, KY;Muldraugh, KY;West Point, KY;Rosewood, KY;Riverside, KY
-```
-
----
-
 ## 🛠️ Scripts
 
 | Script | Uso |
@@ -173,7 +223,8 @@ cd scripts && bash gerar_readme_mods.sh ../configs/servertest.ini > ../MODS.md
 ```
 projeto-zomboid-server/
 ├── configs/
-│   └── servertest.ini              # Config principal do servidor
+│   ├── servertest.ini              # Config principal do servidor
+│   └── servertest_SandboxVars.lua  # Config de sandbox (zumbis, loot, clima, eventos)
 ├── docs/
 │   └── index.html                  # Site GitHub Pages (vitrine para jogadores)
 ├── scripts/
@@ -184,6 +235,16 @@ projeto-zomboid-server/
 ├── MODS.md                         # Referência técnica (gerado automaticamente)
 └── README.md                       # Este arquivo (documentação dev/admin)
 ```
+
+---
+
+## 📝 Notas Técnicas
+
+- Os arquivos `.ini` e `.lua` foram editados manualmente e testados em conjunto para garantir coerência entre as configurações do servidor e do sandbox
+- O servidor utiliza `PauseEmpty=true` — quando o último jogador desconecta, o mundo inteiro congela: zumbis param, tempo não avança, comida não estraga, plantas não crescem. Isso é ideal para grupos de amigos que não jogam 24/7
+- O `DayLength=4` (2h reais por ciclo) foi escolhido para dar tempo de explorar e sobreviver sem que o dia passe rápido demais
+- Anti-cheat tipo 21 está desabilitado por compatibilidade com mods de veículos
+- O `CarEngineAttractionModifier=0.5` reduz a atração de zumbis por motores para evitar lag com muitos mods de veículos
 
 ---
 
