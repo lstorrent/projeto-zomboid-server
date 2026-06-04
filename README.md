@@ -5,7 +5,7 @@
 🌐 **Site do Projeto:** [https://lstorrent.github.io/projeto-zomboid-server/](https://lstorrent.github.io/projeto-zomboid-server/)
 
 ![Project Zomboid](https://img.shields.io/badge/Project%20Zomboid-v41.78.19-green)
-![Mods](https://img.shields.io/badge/Mods-97-blue)
+![Mods](https://img.shields.io/badge/Mods-106-blue)
 ![Players](https://img.shields.io/badge/Max%20Players-16-orange)
 ![Status](https://img.shields.io/badge/Status-ALPHA-red)
 
@@ -81,7 +81,7 @@ Este servidor foi projetado para um **grupo de amigos** que querem jogar juntos 
 | **Instância** | servertest |
 | **Porta** | 16261 (TCP/UDP) |
 | **Max Players** | 16 |
-| **Mods** | 97 Mod IDs / 111 Workshop Items |
+| **Mods** | 106 Mod IDs / 120 Workshop Items |
 | **PVP** | Sempre ativo (sem Safety System) |
 | **Loot Respawn** | Desativado |
 | **Veículos Vanilla** | Removidos (só mods) |
