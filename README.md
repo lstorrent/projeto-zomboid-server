@@ -1,13 +1,13 @@
 # 🧟 Servidor Project Zomboid - Hardcore Survival
 
-> ⚠️ **PROJETO EM FASE ALPHA** — Configurações em desenvolvimento, testes e aceitação da comunidade. O objetivo é criar um servidor o mais próximo possível do **perfeito hardcore survival**.
+> ✅ **PROJETO EM FASE BETA** — Lista oficial de mods definida. Servidor pronto para testes com jogadores.
 
 🌐 **Site do Projeto:** [https://lstorrent.github.io/projeto-zomboid-server/](https://lstorrent.github.io/projeto-zomboid-server/)
 
 ![Project Zomboid](https://img.shields.io/badge/Project%20Zomboid-v41.78.19-green)
-![Mods](https://img.shields.io/badge/Mods-106-blue)
+![Mods](https://img.shields.io/badge/Mods-90-blue)
 ![Players](https://img.shields.io/badge/Max%20Players-16-orange)
-![Status](https://img.shields.io/badge/Status-ALPHA-red)
+![Status](https://img.shields.io/badge/Status-BETA-yellow)
 
 ---
 
@@ -44,12 +44,12 @@ Este servidor foi projetado para um **grupo de amigos** que querem jogar juntos 
 
 ```
 ╔══════════════════════════════════════════════════════════╗
-║  🔴 ALPHA - Em desenvolvimento e testes                 ║
+║  🟡 BETA - Lista oficial definida, testes com players    ║
 ║                                                          ║
-║  • Mods sendo testados e balanceados                     ║
-║  • Configurações de sandbox em ajuste                    ║
+║  • Lista de mods oficialmente definida                   ║
+║  • Configurações de sandbox ajustadas                    ║
 ║  • Feedback da comunidade é bem-vindo!                   ║
-║  • Wipes podem acontecer a qualquer momento              ║
+║  • Wipes podem acontecer em caso de bugs críticos        ║
 ╚══════════════════════════════════════════════════════════╝
 ```
 
@@ -58,15 +58,15 @@ Este servidor foi projetado para um **grupo de amigos** que querem jogar juntos 
 - [x] Seleção de mods de armas e combate
 - [x] Seleção de mapas extras
 - [x] Validação de Workshop IDs
-- [x] Configuração completa de 111 Workshop Items
+- [x] Configuração completa de 90 Workshop Items
 - [x] Configuração do servertest_SandboxVars.lua
-- [ ] Balanceamento do SandboxVars (zumbis, loot, clima)
+- [x] Lista oficial de mods definida
 - [ ] Testes de compatibilidade entre mods
 - [ ] Testes de performance com jogadores
 - [ ] Ajuste fino de spawn/população de zumbis
 - [ ] Configuração do RandomZombiesFull (sprinters à noite)
 - [ ] Feedback da comunidade e ajustes finais
-- [ ] Release BETA
+- [ ] Release STABLE
 
 ---
 
@@ -81,7 +81,7 @@ Este servidor foi projetado para um **grupo de amigos** que querem jogar juntos 
 | **Instância** | servertest |
 | **Porta** | 16261 (TCP/UDP) |
 | **Max Players** | 16 |
-| **Mods** | 106 Mod IDs / 120 Workshop Items |
+| **Mods** | 90 Workshop Items |
 | **PVP** | Sempre ativo (sem Safety System) |
 | **Loot Respawn** | Desativado |
 | **Veículos Vanilla** | Removidos (só mods) |
@@ -89,7 +89,7 @@ Este servidor foi projetado para um **grupo de amigos** que querem jogar juntos 
 | **VOIP** | Ativado (3D direcional) |
 | **Mundo sem players** | Congelado (PauseEmpty) |
 | **Facções** | Desativadas |
-| **Status** | 🔴 ALPHA — em testes |
+| **Status** | 🟡 BETA — lista oficial definida |
 
 ---
 
