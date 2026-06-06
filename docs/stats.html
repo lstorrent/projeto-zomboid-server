@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats - Servidor Zomboid</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 3px solid #e94560;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            color: #e94560;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
+        }
+        .hero p { font-size: 1.1em; color: #aaa; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .section { margin-bottom: 40px; }
+        .section h2 {
+            font-size: 1.5em;
+            color: #e94560;
+            margin-bottom: 15px;
+            border-left: 4px solid #e94560;
+            padding-left: 15px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: #1a1a2e;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+        .stat-card .value { font-size: 2em; color: #e94560; font-weight: bold; }
+        .stat-card .label { color: #888; font-size: 0.85em; margin-top: 5px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #1a1a2e;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th {
+            background: #16213e;
+            color: #e94560;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        td { padding: 10px 15px; border-bottom: 1px solid #222; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: rgba(233, 69, 96, 0.05); }
+        .rank { color: #e94560; font-weight: bold; font-size: 1.2em; }
+        .gold { color: #ffd700; }
+        .silver { color: #c0c0c0; }
+        .bronze { color: #cd7f32; }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #e94560;
+            text-decoration: none;
+        }
+        .back-link:hover { text-decoration: underline; }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #555;
+            border-top: 1px solid #222;
+        }
+        .update-info {
+            background: #1a1a2e;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>📊 ESTATÍSTICAS DO SERVIDOR</h1>
+    <p>Ranking de sobrevivência, mortes e tempo de jogo</p>
+</div>
+
+<div class="container">
+    <a href="index.html" class="back-link">← Voltar ao site principal</a>
+
+    <div class="update-info">
+        📅 Período: <strong>04/06/2026 — 06/06/2026</strong> | Atualizado em: 06/06/2026
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="value">5</div>
+            <div class="label">Jogadores</div>
+        </div>
+        <div class="stat-card">
+            <div class="value">26</div>
+            <div class="label">Mortes Totais</div>
+        </div>
+        <div class="stat-card">
+            <div class="value">28h40min</div>
+            <div class="label">Tempo Combinado</div>
+        </div>
+        <div class="stat-card">
+            <div class="value">0</div>
+            <div class="label">Kills PvP</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🏆 Maior Sobrevivência (vida mais longa)</h2>
+        <table>
+            <tr><th>#</th><th>Jogador</th><th>Tempo Vivo</th></tr>
+            <tr><td><span class="rank gold">🥇</span></td><td>EU-Lion</td><td>17h51min</td></tr>
+            <tr><td><span class="rank silver">🥈</span></td><td>CATRACA</td><td>17h23min</td></tr>
+            <tr><td><span class="rank bronze">🥉</span></td><td>Antares</td><td>14h18min</td></tr>
+            <tr><td>4</td><td>phenrique</td><td>1h33min</td></tr>
+            <tr><td>5</td><td>guilherme kibashi</td><td>—</td></tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>💀 Mortes por Jogador</h2>
+        <table>
+            <tr><th>#</th><th>Jogador</th><th>Mortes</th><th>Causa</th></tr>
+            <tr><td>1</td><td>EU-Lion</td><td>11</td><td>PvE</td></tr>
+            <tr><td>2</td><td>phenrique</td><td>7</td><td>PvE</td></tr>
+            <tr><td>3</td><td>Antares</td><td>6</td><td>PvE</td></tr>
+            <tr><td>4</td><td>CATRACA</td><td>2</td><td>PvE</td></tr>
+            <tr><td>5</td><td>guilherme kibashi</td><td>0</td><td>—</td></tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>⏱️ Tempo Total Online</h2>
+        <table>
+            <tr><th>#</th><th>Jogador</th><th>Tempo Online</th><th>Sessões</th></tr>
+            <tr><td><span class="rank gold">🥇</span></td><td>CATRACA</td><td>10h33min</td><td>8</td></tr>
+            <tr><td><span class="rank silver">🥈</span></td><td>Antares</td><td>9h17min</td><td>9</td></tr>
+            <tr><td><span class="rank bronze">🥉</span></td><td>EU-Lion</td><td>5h58min</td><td>15</td></tr>
+            <tr><td>4</td><td>phenrique</td><td>1h41min</td><td>9</td></tr>
+            <tr><td>5</td><td>guilherme kibashi</td><td>1h09min</td><td>4</td></tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>📈 Resumo</h2>
+        <table>
+            <tr><th>Métrica</th><th>Valor</th></tr>
+            <tr><td>Servidor ativo desde</td><td>04/06/2026</td></tr>
+            <tr><td>Total de mortes</td><td>26 (todas PvE)</td></tr>
+            <tr><td>Kills PvP</td><td>0</td></tr>
+            <tr><td>Jogador mais dedicado (tempo online)</td><td>CATRACA (10h33min)</td></tr>
+            <tr><td>Sobrevivente mais longo</td><td>EU-Lion (17h51min vivo)</td></tr>
+            <tr><td>Mais mortes</td><td>EU-Lion (11 mortes)</td></tr>
+            <tr><td>Sem mortes</td><td>guilherme kibashi ✨</td></tr>
+        </table>
+    </div>
+</div>
+
+<div class="footer">
+    <p>Servidor Project Zomboid - Hardcore Survival | Stats geradas dos logs do servidor</p>
+</div>
+
+</body>
+</html>
