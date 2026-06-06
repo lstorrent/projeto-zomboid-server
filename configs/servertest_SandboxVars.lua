@@ -91,7 +91,7 @@ SandboxVars = {
     -- 4 = Rare
     -- 5 = Normal
     -- 6 = Common
-    FoodLoot = 4,
+    FoodLoot = 5,
     -- Default=Rare
     -- 1 = None (not recommended)
     -- 2 = Insanely Rare
@@ -99,7 +99,7 @@ SandboxVars = {
     -- 4 = Rare
     -- 5 = Normal
     -- 6 = Common
-    CannedFoodLoot = 4,
+    CannedFoodLoot = 5,
     -- Default=Rare
     -- 1 = None (not recommended)
     -- 2 = Insanely Rare
@@ -107,7 +107,7 @@ SandboxVars = {
     -- 4 = Rare
     -- 5 = Normal
     -- 6 = Common
-    LiteratureLoot = 4,
+    LiteratureLoot = 5,
     -- Seeds, Nails, Saws, Fishing Rods, various tools, etc... Default=Rare
     -- 1 = None (not recommended)
     -- 2 = Insanely Rare
@@ -115,7 +115,7 @@ SandboxVars = {
     -- 4 = Rare
     -- 5 = Normal
     -- 6 = Common
-    SurvivalGearsLoot = 4,
+    SurvivalGearsLoot = 5,
     -- Default=Rare
     -- 1 = None (not recommended)
     -- 2 = Insanely Rare
@@ -123,7 +123,7 @@ SandboxVars = {
     -- 4 = Rare
     -- 5 = Normal
     -- 6 = Common
-    MedicalLoot = 4,
+    MedicalLoot = 5,
     -- Default=Rare
     -- 1 = None (not recommended)
     -- 2 = Insanely Rare
@@ -139,7 +139,7 @@ SandboxVars = {
     -- 4 = Rare
     -- 5 = Normal
     -- 6 = Common
-    RangedWeaponLoot = 4,
+    RangedWeaponLoot = 5,
     -- Default=Rare
     -- 1 = None (not recommended)
     -- 2 = Insanely Rare
@@ -147,7 +147,7 @@ SandboxVars = {
     -- 4 = Rare
     -- 5 = Normal
     -- 6 = Common
-    AmmoLoot = 4,
+    AmmoLoot = 5,
     -- Default=Rare
     -- 1 = None (not recommended)
     -- 2 = Insanely Rare
@@ -155,7 +155,7 @@ SandboxVars = {
     -- 4 = Rare
     -- 5 = Normal
     -- 6 = Common
-    MechanicsLoot = 4,
+    MechanicsLoot = 5,
     -- Everything else. Also affects foraging for all items in Town/Road zones. Default=Rare
     -- 1 = None (not recommended)
     -- 2 = Insanely Rare
@@ -163,7 +163,7 @@ SandboxVars = {
     -- 4 = Rare
     -- 5 = Normal
     -- 6 = Common
-    OtherLoot = 4,
+    OtherLoot = 5,
     -- Controls the global temperature. Default=Normal
     -- 1 = Very Cold
     -- 2 = Cold
@@ -613,5 +613,280 @@ SandboxVars = {
         RallyGroupSeparation = 15,
         -- How close members of a group stay to the group's leader. Minimum=1 Maximum=10 Default=3
         RallyGroupRadius = 3,
+    },
+    MoreBuilds = {
+        -- Minimum=1 Maximum=10000 Default=1200
+        MaxWaterWallStorageAmount = 1200,
+        BuildingPermission = 1,
+    },
+    SaveOurStationCore = {
+        RequirePowerShutoff = true,
+        EnableFaults = true,
+        EnableInterruptions = true,
+        ReliabilityProfile = 3,
+        TimeDurationMultiplier = 3,
+        OmitDiagnosticCode = false,
+        OmitShutdownTime = false,
+        OmitLocation = false,
+        EnableDebugging = false,
+    },
+    BecomeDesensitized = {
+        -- Minimum=1 Maximum=10000 Default=500
+        MinimumZombieKills = 500,
+        -- Minimum=1 Maximum=10000 Default=2000
+        MaximumZombieKills = 2000,
+        ConsiderTraits = true,
+        ConsiderOccupations = true,
+    },
+    TheyKnew = {
+        -- Minimum=1 Maximum=1000000 Default=500
+        SpawnChance = 500,
+        -- Minimum=0 Maximum=100 Default=100
+        LootChance = 100,
+        -- Minimum=0 Maximum=100 Default=0
+        LootChanceZomboxycycline = 0,
+    },
+    CommonSense = {
+        PryingMechanic = true,
+        PartsHighlighter = true,
+        GunStats = true,
+        ColorFilter = false,
+        PryBuildingDoors = true,
+        PryGarageDoors = true,
+        PrySafeDoors = false,
+        PryWindows = true,
+        PryVehicleDoors = true,
+        ShatterVehicleWindows = true,
+        -- Minimum=0 Maximum=10 Default=8
+        ReinforcedDoorLevel = 8,
+        -- Minimum=0 Maximum=100 Default=20
+        WindowShatterChance = 20,
+        -- Minimum=0.00 Maximum=5.00 Default=1.00
+        PryingChanceMultiplier = 1.0,
+        -- Minimum=0 Maximum=100 Default=10
+        CanWoundChance = 10,
+        -- Minimum=0.00 Maximum=10.00 Default=1.00
+        CanWoundIntensity = 1.0,
+    },
+    ISA = {
+        ChargeFreq = 1,
+        DrainCalc = 2,
+        -- Minimum=1 Maximum=100 Default=25
+        solarPanelEfficiency = 25,
+        -- Minimum=0 Maximum=1000 Default=100
+        batteryDegradeChance = 100,
+        -- Minimum=1 Maximum=10000 Default=100
+        DIYBatteryMultiplier = 100,
+        -- Minimum=0 Maximum=100 Default=25
+        solarPanelWorldSpawns = 25,
+        BatteryBankSpawn = 3,
+        StashMode = 1,
+        -- Minimum=0.00 Maximum=100.00 Default=1.00
+        LRMSolarPanels = 1.0,
+        -- Minimum=0.00 Maximum=100.00 Default=1.00
+        LRMBatteries = 1.0,
+        -- Minimum=0.00 Maximum=100.00 Default=1.00
+        LRMMisc = 1.0,
+        -- Minimum=1 Maximum=1440 Default=10
+        ConnectPanelMin = 10,
+        enableExpandedRecipes = false,
+    },
+    Bicycles = {
+        Exhaustion = true,
+        -- Minimum=0.00 Maximum=1.00 Default=0.39
+        ExhaustionDrain = 0.39,
+        FitnessExperience = true,
+        -- Minimum=0 Maximum=500 Default=15
+        FitnessExpGain = 15,
+        Warmth = true,
+        -- Minimum=0.00 Maximum=1.00 Default=0.10
+        WarmthGain = 0.1,
+    },
+    GunStockAttackOption = {
+        -- Minimum=0.00 Maximum=200.00 Default=5.00
+        Damage = 5.0,
+        -- Minimum=0.00 Maximum=100.00 Default=0.01
+        EnduranceLost = 0.005,
+        -- Minimum=0 Maximum=100 Default=1
+        WeaponConditionLost = 1,
+        -- Minimum=0.00 Maximum=10.00 Default=1.34
+        RifleSpeed = 1.34,
+        -- Minimum=0.00 Maximum=10.00 Default=1.24
+        PistolSpeed = 1.24,
+    },
+    BuildingMenu = {
+        isThumpable = true,
+        EmptyBox1 = false,
+        WallsCategoryDivider = false,
+        woodWallsSubCategory = true,
+        clapboardWallsSubCategory = true,
+        stoneWallsSubCategory = true,
+        brickWallsSubCategory = true,
+        cinderblockWallsSubCategory = true,
+        paintedWallsSubCategory = true,
+        archedWindowWallsSubCategory = true,
+        commercialWallsSubCategory = true,
+        industrialWallsSubCategory = true,
+        EmptyBox2 = false,
+        RoofsCategoryDivider = false,
+        roofsCategory = true,
+        EmptyBox3 = false,
+        DoorsCategoryDivider = false,
+        doorsSubCategory = true,
+        garageDoorsSubCategory = true,
+        EmptyBox4 = false,
+        ArchitecturePlusCategoryDivider = false,
+        architecturePlusCategory = true,
+        EmptyBox5 = false,
+        WindowsCategoryDivider = false,
+        windowsCategory = true,
+        EmptyBox6 = false,
+        FencingCategoryDivider = false,
+        highFencesSubCategory = true,
+        lowAndRailingFencesSubCategory = true,
+        otherFencesSubCategory = true,
+        EmptyBox7 = false,
+        FloorsCategoryDivider = false,
+        floorsCategory = true,
+        EmptyBox8 = false,
+        StairsCategoryDivider = false,
+        stairsCategory = true,
+        EmptyBox9 = false,
+        RoadworkCategoryDivider = false,
+        roadworkAsphaltSubCategory = true,
+        roadworkOverlaysSubCategory = false,
+        roadworkSidewalkEdgeSubCategory = false,
+        roadworkDirtandGrassSubCategory = false,
+        roadworkPaintedRoadMarkingsSubCategory = true,
+        EmptyBox10 = false,
+        ContainersCategoryDivider = false,
+        kitchenCountersSubCategory = true,
+        commercialCountersSubCategory = true,
+        cratesSubCategory = true,
+        metalContainersSubCategory = true,
+        clothesRacksSubCategory = false,
+        trashCansSubCategory = true,
+        containersOthersSubCategory = true,
+        EmptyBox11 = false,
+        RecreationalCategoryDivider = false,
+        musicSubCategory = false,
+        EmptyBox12 = false,
+        FurnitureCategoryDivider = false,
+        tablesSubCategory = false,
+        bedsSubCategory = false,
+        seatingFurnitureSubCategory = false,
+        bookshelvesSubCategory = true,
+        dressersAndWardrobesSubCategory = true,
+        EmptyBox13 = false,
+        DecorationsCategoryDivider = false,
+        rugsSubCategory = true,
+        curtainsSubCategory = false,
+        postersAndSignsSubCategory = false,
+        graffitiSubCategory = false,
+        otherDecorationsSubCategory = false,
+        EmptyBox14 = false,
+        VegetationCategoryDivider = false,
+        flowerBedsSubCategory = true,
+        indoorPlantsSubCategory = true,
+        outdoorPlantsSubCategory = true,
+        landscapingSubCategory = false,
+        EmptyBox15 = false,
+        SurvivalCategoryDivider = false,
+        fireplaceSubCategory = false,
+        generatorSubCategory = false,
+        metalDrums = false,
+        waterWell = false,
+        EmptyBox16 = false,
+        AppliancesCategoryDivider = false,
+        lightingAppliances = false,
+        bathroomAppliances = false,
+        cookingAppliances = false,
+        fridgeAppliances = false,
+        laundryAppliances = false,
+    },
+    BuildingMenuRecipes = {
+        MaterialsDivider = false,
+        usePaint = true,
+        paintUses = 3,
+        blowTorchUses = 3,
+        bucketAsphaltMixtureUses = 3,
+        bucketConcreteUses = 3,
+        -- Minimum=1 Maximum=100 Default=6
+        bigWallWoodCount = 6,
+        -- Minimum=1 Maximum=100 Default=6
+        bigWallNailsCount = 6,
+        -- Minimum=1 Maximum=100 Default=3
+        smallWallWoodCount = 3,
+        -- Minimum=1 Maximum=100 Default=4
+        smallWallNailsCount = 4,
+        -- Minimum=1 Maximum=100 Default=6
+        bigObjectsWoodCount = 6,
+        -- Minimum=1 Maximum=100 Default=8
+        bigObjectsNailsCount = 8,
+        -- Minimum=1 Maximum=100 Default=4
+        smallObjectsWoodCount = 4,
+        -- Minimum=1 Maximum=100 Default=6
+        smallObjectsNailsCount = 6,
+        -- Minimum=1 Maximum=100 Default=2
+        glassPaneCount = 2,
+        -- Minimum=1 Maximum=100 Default=4
+        metalBarsCount = 4,
+        -- Minimum=1 Maximum=100 Default=10
+        screwsCount = 10,
+        -- Minimum=1 Maximum=100 Default=10
+        scrapMetalCountForFences = 10,
+        -- Minimum=1 Maximum=100 Default=5
+        scrapMetalCountForElectrical = 5,
+        -- Minimum=1 Maximum=100 Default=5
+        sheetMetalCountForWalls = 5,
+        -- Minimum=1 Maximum=100 Default=4
+        sheetMetalCountForDoors = 4,
+        -- Minimum=1 Maximum=100 Default=4
+        sheetMetalCountForContainers = 4,
+        -- Minimum=1 Maximum=100 Default=4
+        sheetMetalCountForFixturesAndAppliances = 4,
+        -- Minimum=1 Maximum=100 Default=1
+        sheetMetalCountForRoofingAndFloors = 1,
+        -- Minimum=1 Maximum=100 Default=2
+        smallSheetMetalCountForRoofingAndFloors = 2,
+        EmptyBox1 = false,
+        SkillsDivider = false,
+        -- Minimum=1 Maximum=10 Default=5
+        bigObjectsCarpentrySkill = 5,
+        -- Minimum=1 Maximum=10 Default=4
+        smallObjectsCarpentrySkill = 4,
+        -- Minimum=0.05 Maximum=100.00 Default=2.50
+        carpentryXpPerLevel = 2.5,
+        -- Minimum=0.05 Maximum=100.00 Default=3.50
+        metalweldingXpPerLevel = 3.5,
+        -- Minimum=0.05 Maximum=100.00 Default=5.00
+        electricalXpPerLevel = 5.0,
+        EmptyBox2 = false,
+        SpecialObjectsRecipesDivider = false,
+        -- Minimum=1 Maximum=9998 Default=1500
+        maxWaterWellStorageAmount = 1500,
+        -- Minimum=0.10 Maximum=10.00 Default=1.00
+        waterWellRainIntensityMul = 1.0,
+        waterWellHourlyRefillRateInterval = "1;5",
+        -- Minimum=1 Maximum=100 Default=15
+        plankCountForMilitaryCrate = 15,
+        -- Minimum=1 Maximum=100 Default=10
+        nailsCountForMilitaryCrate = 10,
+        -- Minimum=1 Maximum=10 Default=9
+        militaryCrateCarpentrySkill = 9,
+    },
+    JordanalSpawns = {
+        -- Minimum=0.00 Maximum=100.00 Default=0.04
+        DPM95_Camo_UnitChance = 0.04,
+        -- Minimum=0.00 Maximum=100.00 Default=0.04
+        UmbrellaCorp_UnitChance = 0.04,
+        -- Minimum=0.00 Maximum=100.00 Default=0.04
+        MARPAT_Camo_UnitChance = 0.04,
+    },
+    TacHold = {
+        -- Minimum=0 Maximum=10 Default=0
+        AimingRequirement = 0,
+        -- Minimum=0 Maximum=10 Default=0
+        PistolAimingRequirement = 0,
     },
 }
