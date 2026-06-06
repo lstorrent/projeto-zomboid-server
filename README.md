@@ -1,13 +1,13 @@
 # 🧟 Servidor Project Zomboid - Hardcore Survival
 
-> ✅ **PROJETO EM FASE BETA** — Lista oficial de mods definida. Servidor pronto para testes com jogadores.
+> ✅ **STABLE v1.0** — Servidor em produção. Todos os mods testados e funcionando sem erros.
 
 🌐 **Site do Projeto:** [https://lstorrent.github.io/projeto-zomboid-server/](https://lstorrent.github.io/projeto-zomboid-server/)
 
 ![Project Zomboid](https://img.shields.io/badge/Project%20Zomboid-Build%2042%20unstable-green)
 ![Mods](https://img.shields.io/badge/Mods-78-blue)
 ![Players](https://img.shields.io/badge/Max%20Players-16-orange)
-![Status](https://img.shields.io/badge/Status-BETA-yellow)
+![Status](https://img.shields.io/badge/Status-STABLE%20v1.0-brightgreen)
 
 ---
 
@@ -40,16 +40,16 @@ Este servidor foi projetado para um **grupo de amigos** que querem jogar juntos 
 
 ---
 
-## 🚧 Status do Projeto
+## ✅ Status do Projeto
 
 ```
 ╔══════════════════════════════════════════════════════════╗
-║  🟡 BETA - Lista oficial definida, testes com players    ║
+║  🟢 STABLE v1.0 - Servidor em produção                  ║
 ║                                                          ║
-║  • Lista de mods oficialmente definida                   ║
-║  • Configurações de sandbox ajustadas                    ║
-║  • Feedback da comunidade é bem-vindo!                   ║
-║  • Wipes podem acontecer em caso de bugs críticos        ║
+║  • Todos os 79 mods testados e rodando sem erros         ║
+║  • Servidor configurado como serviço (systemd)           ║
+║  • Reinício automático a cada 12 horas                   ║
+║  • Configurações de sandbox finalizadas                  ║
 ╚══════════════════════════════════════════════════════════╝
 ```
 
@@ -61,12 +61,10 @@ Este servidor foi projetado para um **grupo de amigos** que querem jogar juntos 
 - [x] Configuração completa de 79 Workshop Items
 - [x] Configuração do servertest_SandboxVars.lua
 - [x] Lista oficial de mods definida
-- [ ] Testes de compatibilidade entre mods
-- [ ] Testes de performance com jogadores
-- [ ] Ajuste fino de spawn/população de zumbis
-- [ ] Configuração do RandomZombiesFull (sprinters à noite)
-- [ ] Feedback da comunidade e ajustes finais
-- [ ] Release STABLE
+- [x] Testes de compatibilidade entre mods
+- [x] Testes de performance com jogadores
+- [x] Servidor como serviço (systemd + restart 12h)
+- [x] Release STABLE v1.0
 
 ---
 
@@ -87,7 +85,8 @@ Este servidor foi projetado para um **grupo de amigos** que querem jogar juntos 
 | **VOIP** | Ativado (3D direcional) |
 | **Mundo sem players** | Congelado (PauseEmpty) |
 | **Facções** | Desativadas |
-| **Status** | 🟡 BETA — lista oficial definida |
+| **Status** | 🟢 STABLE v1.0 |
+| **Serviço** | systemd (restart automático 12h) |
 
 ---
 
@@ -222,6 +221,8 @@ projeto-zomboid-server/
 
 ## 📝 Notas Técnicas
 
+- **Servidor como serviço:** O servidor roda como serviço systemd, com reinício automático a cada 12 horas para manutenção de performance e liberação de memória
+- **Mods sem erros:** Todos os 79 Workshop Items foram testados em conjunto — zero erros no console do servidor durante gameplay
 - Os arquivos `.ini` e `.lua` foram editados manualmente e testados em conjunto para garantir coerência entre as configurações do servidor e do sandbox
 - O servidor utiliza `PauseEmpty=true` — quando o último jogador desconecta, o mundo inteiro congela: zumbis param, tempo não avança, comida não estraga, plantas não crescem. Isso é ideal para grupos de amigos que não jogam 24/7
 - O `DayLength=4` (2h reais por ciclo) foi escolhido para dar tempo de explorar e sobreviver sem que o dia passe rápido demais
